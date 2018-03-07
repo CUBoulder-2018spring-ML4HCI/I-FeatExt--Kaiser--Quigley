@@ -3,5 +3,7 @@
 Matt Kaiser and Tanner Quigey
 - Dependencies: pyOSC, numpy, pandas
 - Our goal was to create a simple tool to extract features from JSON data on a users tweets.
-- We were able to classify two twitter users (Gucci Mane, Waka Flocka Flame) based on the amount of retweets one of their tweets recieved.
-- wakasend.py could be used easily along side other algorithims to classify users based on the contents of their tweets. 
+
+- After converting the tweets to JSON for usability we trained our classifer to label tweets with the person who tweeted them. In our case we only used two artists: Waka Flocka Flame and Gucci Mane.
+- We created a feature extractor to collect respective metadata from tweets for a specific musical artist. The feature we decided to use was the retweet count number but a classifier could be trained on anything provided by the Twitter API.
+- The classifer will label unlabeled tweets as either "Gucci" or "Waka" depending on the number of retweets the unlabeled tweet has. 
